@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Độ C</td>
+            <td><input type="number" id="C"></td>  
+        </tr>
+        <tr>
+            <td>Độ F</td>
+            <td><input type="number"  id="F"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="kg()">Kết Quả </button> </td>
+        </tr>
+    </table>
+    <script>
+       function kg(){
+            let A=Number(document.getElementById('C').value);
+            document.getElementById('F').value=(9*A)/5+32;
+        }
+    </script>
+</body>
+</html>
