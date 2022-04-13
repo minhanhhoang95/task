@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <form action="jsmath6.html">
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="number" id="Amount"></td>
+                <td>
+                    <select  id="VND">
+                        <option value="">VND</option>
+                    </select>
+                </td>
+                <td>
+                    <select  id="USD">                      
+                        <option value="">USD</option>                       
+                    </select>
+                </td>
+                <td colspan="2"> <button type="button" onclick="kg()" >convert</button></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td colspan="3"><input type="number"  id="Result"></td>
+            </tr>
+        </table>     
+    </form>
+    <script>
+        function kg(){
+            let money=Number(document.getElementById('Amount').value);
+            document.getElementById('Result').value=money*23000; 
+        }
+    </script>
+</body>
+</html>

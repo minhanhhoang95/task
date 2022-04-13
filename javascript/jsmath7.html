@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input type="number" id="S1">  <input type="number" id="S2">
+    <br><br>
+    <tr>
+        <td><button onclick="kgAdd()">Addition(+)</button></td>
+        <td><button  onclick="kgSub()">Subtraction(-)</button></td>
+        <td><button  onclick="kgMul()">Multiplication(X)</button></td>
+        <td><button  onclick="kgDiv()">Division(/)</button></td>
+    </tr>
+    
+    <br><br>
+    Result : <input type="number" readonly id="Kq" value="">
+    <script>
+       // debugger
+      function kgAdd() {
+          let numA=Number(document.getElementById('S1').value);
+          let numB=Number(document.getElementById('S2').value);
+          document.getElementById('Kq').value=numA+numB;
+      }
+     function kgSub(){
+        let numA=Number(document.getElementById('S1').value);
+          let numB=Number(document.getElementById('S2').value);
+          document.getElementById('Kq').value=numA-numB;  
+      }
+      function kgDiv(){
+        let numA=Number(document.getElementById('S1').value);
+          let numB=Number(document.getElementById('S2').value);
+          document.getElementById('Kq').value=numA/numB;  
+      }
+      function kgMul(){
+        let numA=Number(document.getElementById('S1').value);
+          let numB=Number(document.getElementById('S2').value);
+          document.getElementById('Kq').value=numA*numB;  
+      }
+    </script>
+</body>
+</html>
