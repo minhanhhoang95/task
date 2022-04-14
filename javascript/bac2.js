@@ -8,7 +8,7 @@ function kq() {
     let E = (-numB/2*numA);
   if (numA == 0) {
       alert('đây không phải là hàm bậc hai!');
-  } else if (d == 0) {
+   else if (d == 0) {
       document.getElementsByClassName('inX').value=E;
       document.getElementsByClassName('inY').value=E;
   } else if (d > 0) {

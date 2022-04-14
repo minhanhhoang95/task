@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A leap year</title>
+</head>
+
+<body>
+    <script>
+        //debugger
+        // var year = parseInt(prompt("Enter a year "));
+        // var isleapyear = false;
+        // var isdivivleby4 = year % 4 == 0;
+        // if (isdivivleby4) {
+        //     var isdivivleby100 = year % 100 == 0;
+        //     if (isdivivleby100) {
+        //         var isdivivleby400 = year % 400 == 0
+        //         if (isdivivleby400) {
+        //             isleapyear = true;
+        //         }
+        //         else {
+        //             isleapyear = true;
+        //         }
+        //     }
+        // }
+        // if (isleapyear) {
+        //     alert(year + "is a leap year");
+        // } else {
+        //     alert(year + "is a not leap year");
+        // }
+        var year = prompt('Enter year','');
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    alert(year + 'is a leap year');
+                } else { 
+                    alert(year + 'is not leap year');
+                }
+            } else {
+                alert(year + 'is a leap year');
+            }
+        } else { alert(year + 'is not leap year'); }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
