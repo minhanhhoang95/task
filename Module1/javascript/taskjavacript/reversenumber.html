@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>số đảo ngược</title>
+</head>
+
+<body>
+    <script>
+        let number=parseInt(prompt('nhập số '));
+        // let number = 435
+        let number1 = number;
+        let reversenumber=0;
+        let surplus=0;
+        while (number1 > 0) {
+            surplus = number1 % 10;
+            number1 = Math.floor(number1 / 10);
+            reversenumber = reversenumber * 10 + surplus;
+        }
+        // console.log(`${number}${number == reversenumber ? 'là số đối xứng' : 'là số không đối xứng'}`)
+        document.write(`${number}${number = reversenumber ? 'là số đối xứng' : 'là số không đối xứng'}`);
+    </script>
+</body>
+
+</html>
