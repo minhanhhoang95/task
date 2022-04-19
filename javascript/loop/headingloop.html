@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>heading</title>
 </head>
+
 <body>
     <script>
-        let list='<ol>'
+        let list = '<ol>'
+        let heading = 3;
+        let heading_sub = 3;
+        for (let i = 1; i <= heading; i++) {
+            list += `<li>heading ${i}`;
+            list += '<ul>';
+            for (let j = 1; j <= heading_sub; j++) {
+                list += `<li> heading ${i}.${j} </li>`;
+            } list += '</ul>';
+            list += '</li>';
+        }list+= '</ol>';
+        document.write(list);
     </script>
 </body>
+
 </html>

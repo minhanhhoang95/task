@@ -10,28 +10,26 @@
 
 <body>
     <script>
-        let num = parseInt(prompt('Nhập số lượng số nguyên tố đầu tiên muốn in ra: '));
+        let num = parseInt(prompt('Nhập số lượng số nguyên tố muốn in ra: '));
         let count = 0;
         let n = 2;
         while (count < num) {
-            if (checkSNT(n)) {
+            if (n == 2) {
                 document.write(n + ' ');
                 count++;
             }
-            n++;
-        }
-        function checkSNT(n) {
             if (n > 2) {
                 for (i = 2; i < n; i++) {
                     if (n % i == 0)
-                        return false;
+                        break;
                     else
-                        return true;
+                        if (i == (n - 1)) {
+                            document.write(n + ' ');
+                            count++;
+                        }
                 }
             }
-            if (n = 2) {
-                return true;
-            }
+            n++;
         }
     </script>
 </body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 4</title>
+</head>
+
+<body>
+    <script>
+
+        let i = 0, k = 0
+        j = 1,
+            num = 1;
+        let fibonacci = "";
+        while (num >= k) {
+            if (k % 5 == 0 && k != 0)
+                fibonacci += k ;
+            k = j + i;
+            i = j;
+            j=k;
+            num++;
+        }
+        document.write(fibonacci);
+    </script>
+</body>
+
+</html>
