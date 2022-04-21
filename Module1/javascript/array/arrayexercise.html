@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập</title>
+</head>
+
+<body>
+    <script>
+        let inp = parseInt(prompt('enter the number : '));
+        let arr = new Array(inp);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = Math.floor(Math.random() * 71 + 5);
+        }
+        let max = arr[0];
+        let index = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                index = i
+            }
+        }
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                index = i
+            }
+        }
+        document.write(arr.join(';') + '</br>');
+        document.write('Max :' + max + '</br>');
+        document.write('Min :' + min + '</br>');
+        let search = parseInt(prompt('Enter a number search : '));
+        let position = true;
+        document.write('location: ')
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == search) {
+                document.write(i + ',');
+                position = false;
+            }
+        }
+        if (position){
+            document.write(-1);
+        }
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

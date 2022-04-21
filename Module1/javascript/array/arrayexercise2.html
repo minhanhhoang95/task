@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập 2</title>
+</head>
+
+<body>
+    <script>
+        let inp = parseInt(prompt('enter a number :'));
+        let arr = new Array(inp);
+
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt('enter the element :' + (i + 1)));
+        }
+        // document.write(arr);
+        let newarr = arr + '';
+        // document.write(typeof newarr);
+        let reversearr = '';
+        for (let i = newarr.length - 1; i >= 0; i--) {
+            reversearr += newarr[i]
+        }
+        document.write(reversearr);
+        
+        if (reversearr == arr) {
+            document.write('This is the symmetric number');
+        } else {
+            document.write('This is not a symmetric number');
+        }
+    </script>
+</body>
+
+</html>

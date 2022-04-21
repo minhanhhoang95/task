@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 1</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1
+        // let mycolor=['red','green','white','black'];
+
+        // document.write(mycolor.toString()+'</br>');
+        // document.write(mycolor.join('+'));
+
+        //  bài 2
+
+
+        // let arr=[0,2,5,4,6];
+        // let result=[arr[0]];
+        // for(let i=1;i<arr.length;i++){
+        //     if((arr[i-1]%2===0)&&(arr[i]%2===0)){
+        //         result.push('-',arr[i]) ; 
+        //     }
+        //     else{
+        //         result.push(arr[i]);
+        //     }
+        // }
+        // document.write(result.join(''));
+
+
+        // bài 3
+
+
+        let arr = 'hoanganhminh';
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (UPPER.indexOf(arr[i]) != -1) {
+                result.push(arr[i].toLowerCase());
+            } else if (LOWER.indexOf(arr[i] != -1)) {
+                result.push(arr[i].toUpperCase());
+            } else {
+                result.push(arr[i]);
+            }
+        }
+        document.write(result.join('-'));
+    </script>
+</body>
+
+</html>
