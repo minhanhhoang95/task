@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 1</title>
+</head>
+
+<body>
+    <script>
+        let arr=[];
+        let size = parseInt(prompt('enter the size :'));
+        let min = parseInt(prompt('enter the min :'));
+        let max = parseInt(prompt('enter the max :'));
+        for (let i = 0; i < size; i++) {
+            arr[i] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        document.write(arr +'</br>');
+        let lengtharr=arr.length;
+        let count=0;
+        for (let i=0;i<lengtharr;i++){
+            if(arr[i]>=10){
+                count++
+            }
+        }document.write('Larger number : '+ count);
+    </script>
+</body>
+
+</html>

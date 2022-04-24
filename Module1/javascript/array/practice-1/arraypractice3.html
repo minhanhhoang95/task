@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 3</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        let size = parseInt(prompt('enter the size :'));
+        let min = parseInt(prompt('enter the min :'));
+        let max = parseInt(prompt('enter the max :'));
+        for (let i = 0; i < size; i++) { arr[i] = Math.floor(Math.random() * (max - min + 1) + min); } document.write(arr
+            + '</br>');
+        let arrmax = arr[0];
+        let lengtharr = arr.length;
+        let sum = 0;
+        for (let i = 0; i < lengtharr; i++) {
+            
+            if (arrmax < arr[i]) {
+                arrmax = arr[i];
+
+            }
+        }
+        for (let i = 0; i < lengtharr; i++) {
+            sum = sum + arr[i];
+            total = sum / lengtharr;
+        }
+        
+        document.write('the number max : ' + arrmax + '</br>');
+        document.write('location : ' + total);
+    </script>
+</body>
+
+</html>
