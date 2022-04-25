@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 4</title>
+    <title>Bài 2</title>
 </head>
 
 <body>
     <script>
-        let str = Number(prompt("nhap ki tu bat ki:"));
-        function checkNumber(str) {
-            return (Number.isInteger(str)) ? true : false;
+        var m = parseInt(prompt("Enter meter"));
+        if (isNaN(m)) {
+            document.write('Nhập vào phải là một số')
+        } else {
+            document.write("feet= " + m * 3.2808);
         }
-        checkNumber();
-        document.write(checkNumber(str));
     </script>
 </body>
 
