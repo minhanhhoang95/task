@@ -17,10 +17,12 @@
 
     <p id="sum"></p>
     <script>
-        let a = document.getElementById('a').value;
-        let b = document.getElementById('b').value;
+
         function sum() {
-            if (a > b ) {
+            let a = Number(document.getElementById('a').value);
+            let b = Number(document.getElementById('b').value);
+            console.log(typeof b)
+            if (a > b) {
                 alert('Retype a number');
             } else {
                 alert(a + b);
