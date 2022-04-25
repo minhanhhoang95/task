@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 3</title>
+</head>
+
+<body>
+    <ol>nhập số a</ol>
+    <input type="number" id="a">
+    <ol>nhập số b</ol>
+    <input type="number" id="b">
+    <button onclick="sum()">click</button>
+
+    <p id="sum"></p>
+    <script>
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        function sum() {
+            if (a > b ) {
+                alert('Retype a number');
+            } else {
+                alert(a + b);
+            }
+        }
+    </script>
+</body>
+
+</html>
