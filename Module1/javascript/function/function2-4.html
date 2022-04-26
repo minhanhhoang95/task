@@ -6,22 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <link rel="stylesheet" href="funictionphone.css">
 </head>
 
 <body>
-    <script>
-var x = 2;
-var y = [1,2,3,4,5];
-var z = [6,7,8,9,10,11];
+    <div class="container">
 
-if(y[x] + z[x-1] == z[x+2])
-{
-    console.log('Codegym');
-}
-else
-{
-    console.log('Agilead');
-} </script>
+        <div class="row">
+            <label for="productname">Add New Product</label>
+            <input type="text" id="productname">
+            <button class="btn" onclick="addproduct()">Add</button>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Productname
+                            <span style="color: white; cursor: pointer;" title="Ascending">&#x25B2;</span>
+                            <span style="color: white; cursor: pointer;" title="Descending">&#x25BC;</span>
+                        </th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Samsung Glaxy</td>
+                        <td><button class="btn">Edit</button></td>
+                        <td><button class="btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Iphone X</td>
+                        <td><button class="btn">Edit</button></td>
+                        <td><button class="btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Nokia</td>
+                        <td><button class="btn">Edit</button></td>
+                        <td><button class="btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sony Xperia</td>
+                        <td><button class="btn">Edit</button></td>
+                        <td><button class="btn">Delete</button></td>
+                    </tr> -->
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="row">
+            <div id="modifyProduct" class="edit-product d-none">
+                <label for="new_ProductName">Product name</label>
+                <input type="text" class="form-control" id="new_ProductName" name="new_ProductName">
+                <button id="btnUpdate" class="btn">Update</button>
+                <button class="btn" onclick="clearForm()">Cancel</button>
+                <span onclick="clearForm()">&times;</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="funcitionphone.js"></script>
 </body>
 
 </html>
