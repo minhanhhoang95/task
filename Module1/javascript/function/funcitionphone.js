@@ -72,4 +72,15 @@ function clearForm() {
     document.querySelector('#modifyProduct').classList.add('d-none');
     position = 0;
 }
-renderProduct();
+function sort(direction) {
+    direction == 'asc' ? products.sort() : products.reverse();
+    renderProduct(products);
+}
+function search(event) {
+    let keyword = event.target.value;
+    let result = products.filter(function (product, index) {
+        return product.toLowerCase().indexOf(keyword.toLowerCase()) != 1;
+    })
+    removeProduct(result);
+}
+renderProduct(products);
