@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp mô tả hình chữ nhật
+        Mục tiêu</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1355px" height="600px" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        function Rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+            this.getacreage = function () {
+                return width * height
+            };
+            this.getperimeter = function () {
+                return 2 * (width + height)
+            };
+        }
+        function createRectangle() {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            var rectangle = new Rectangle(400, 200);
+            ctx.beginPath()
+            ctx.rect(20, 20, this.width, this.height);
+            ctx.stroke()
+        }
+        createRectangle();
+        function runRectangle() {
+            let height = parseInt(prompt("heigth : "));
+            let width = parseInt(prompt("width : "));
+            if (height && width) {
+                let rectangle = new Rectangle(height, width);
+                rectangle.createRectangle();
+                are = rectangle.getacreage();
+                perimeter = rectangle.getPerimeter();
+            }
+        }
+    </script>
+</body>
+
+</html>

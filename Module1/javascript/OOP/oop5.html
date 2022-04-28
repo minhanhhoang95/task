@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+
+<body>
+    <label for="">Temperature</label>
+    <input type="text" onfocus="this.value" value="" id="Temperature" min="-273"><br>
+    <button onclick="transitionF()">transition F</button>
+    <button onclick="transitionKenvin()">transition Kenvin</button>
+    <div>
+        <p id="showTransitionF"></p>
+        <p id="showTransitionKenvin"></p>
+    </div>
+    <script>
+        let Temperature = function (temp) {
+            this.celsius = temp;
+            this.toFahrenheit = function () {
+                return parseFloat(this.celsius * 1.8 + 32).toFixed(2);
+            }
+        }
+        function transitionF() {
+            celsius = Number(document.getElementById('Temperature').value);
+            if (celsius) {
+                let temperature = new Temperature(celsius);
+                document.getElementById('showTransitionF').innerHTML = `degrees Fahrenheit is :  ${temperature.toFahrenheit()}`
+            }
+        }
+        function transitionKenvin() {
+            celsius = Number(document.getElementById('Temperature').value);
+            if (celsius) {
+                let temperature = new Temperature(celsius);
+                document.getElementById('showTransitionKenvin').innerHTML = `degree k is :  ${temperature.toKelvin()}`
+            }
+        }
+    </script>
+</body>
+
+</html>

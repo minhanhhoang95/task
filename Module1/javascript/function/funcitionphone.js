@@ -78,9 +78,9 @@ function sort(direction) {
 }
 function search(event) {
     let keyword = event.target.value;
-    let result = products.filter(function (product, index) {
+    let result = products.filter(function(product,index) {
         return product.toLowerCase().indexOf(keyword.toLowerCase()) != 1;
     })
-    removeProduct(result);
+    renderProduct(result);
 }
 renderProduct(products);
