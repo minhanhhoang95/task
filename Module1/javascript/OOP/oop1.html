@@ -35,7 +35,8 @@
             }
             this.toString = function(){
                 let str = "";
-                str += v
+                str += `${this.day}/${this.month}/${this.year}`
+                return str;
             }
         };
         let date = new MyDate(2, 2, 2007);
@@ -48,7 +49,7 @@
         date.setDay(10);
         date.setMonth(10);
         date.setYear(2019);
-        alert(day + "/" + month + "/" + year);
+        alert(date.toString());
 
     </script>
 </body>
